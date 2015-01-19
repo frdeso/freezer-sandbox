@@ -1,7 +1,10 @@
-#!/bin/sh -x
-RESULTS_FILE=results/grep.time
-mkdir -p RESULTS_FILE
-date >> $RESULTS_FILE
-adjtimex -p >> $RESULTS_FILE
-grep -irn "freezer" /var/ > /dev/null
-adjtimex -p >> $RESULTS_FILE
+source ./conf.sh
+RESULTS_DIR=results/$TYPE/
+RESULTS_FILE=grep.time
+RESULTS_PATH=$RESULTS_DIR$RESULTS_FILE
+mkdir -p $RESULTS_DIR
+touch $RESULTS_PATH
+date >> $RESULTS_PATH
+adjtimex -p | grep -i "raw time" >> $RESULTS_PATH
+grep -irn "freezer" $INPUT_PATH > /dev/null
+adjtimex -p | grep -i "raw time" >> $RESULTS_PATH

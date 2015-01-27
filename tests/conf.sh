@@ -1,2 +1,2 @@
-TYPE=baremetal
-INPUT_PATH=/home/frdeso/linux
+TYPE=vanilla
+INPUT_PATH=/root/linux

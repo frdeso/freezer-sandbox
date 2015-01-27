@@ -1,5 +1,3 @@
-#! /bin/bash -x
-BASE_DIR=/root/freezer-sandbox/tests/
 CONF_FILE=conf.sh
 RESULTS_DIR=results/
 source $BASE_DIR$CONF_FILE
@@ -10,6 +8,4 @@ mkdir -p $RESULTS_DIR
 touch $RESULTS_PATH
 
 date >> $RESULTS_PATH
-adjtimex -p | grep -i "raw time" >> $RESULTS_PATH
-find $INPUT_PATH > /dev/null
-adjtimex -p | grep -i "raw time" >> $RESULTS_PATH
+{ /usr/bin/time -f "%e\n%U\n%S\n" find $INPUT_PATH$INPUT_FILE > /dev/null ; } 2>> $RESULTS_PATH

@@ -1,6 +1,7 @@
+#!/bin/bash
 CONF_FILE=conf.sh
 RESULTS_DIR=results/
-source $BASE_DIR$CONF_FILE
+source /root/freezer-sandbox/tests/$CONF_FILE
 RESULTS_DIR=$BASE_DIR$RESULTS_DIR$TYPE/
 RESULTS_FILE=find.time
 RESULTS_PATH=$RESULTS_DIR$RESULTS_FILE

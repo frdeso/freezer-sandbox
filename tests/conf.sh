@@ -1,6 +1,6 @@
-TYPE=vanilla
-#BASE_DIR=/home/frdeso/freezer-sandbox/tests/
-BASE_DIR=/root/freezer-sandbox/tests/
-#INPUT_PATH=/home/frdeso/
+TYPE=delta
+BASE_DIR=/home/frdeso/projets/freezer/tests/
+#BASE_DIR=/root/freezer-sandbox/tests/
 INPUT_FILE=linux
-INPUT_PATH=/root/
+INPUT_PATH=/home/frdeso/projets/
+#INPUT_PATH=/root/
